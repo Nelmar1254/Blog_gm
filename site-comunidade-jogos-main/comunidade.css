@@ -1,0 +1,124 @@
+*{
+    padding: 0%;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: red;
+
+}
+div#largur-pagina{
+    width: 85%;
+    margin: auto;
+}
+
+/*-------------MENU---------*/
+nav{
+    background-color: rebeccapurple;
+    height: 28px;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+}
+li{
+    display: inline-block;
+    line-height: 28px;
+    padding: 0px 10px ;
+
+}
+li a{
+    text-decoration: none;
+    color: black;
+
+}
+li a:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+}
+/*--------CONTEUDO 1-----*/
+section#conteudo1{
+    width: 99%;
+}
+
+img{
+    max-width: 400px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+h2{
+    font-size: 28px;
+    color: blueviolet;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+/*-------formulario---------*/
+form img{
+    width: 70px;
+    display: block;
+    float: left;
+    padding: 10px;
+}
+textarea{
+    height: 80px;
+    width: 80%;
+    border: none;
+    padding: 4px;
+    font-size: 14pt;
+    margin: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    float: left;
+}
+input[type=submit]{
+    font-family: arial white;
+    width: 180px;
+    height: 20px;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    display: block;
+    float: right;
+
+}
+input[type=submit]:hover{
+    background-color: blueviolet;
+    color: white;
+
+
+}
+/*--------area comentarios--------*/
+.area-comentario{
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    clear: both;
+    padding: 4px;
+}
+.area-comentario img {
+    width: 70px;
+    float: left;
+    padding: 4px;
+}
+.area-comentario h3{
+    float: left;
+    color: blueviolet;
+    font-size: 12pt;
+    padding: 5px 10px 5px 0px;
+}
+.area-comentario h4{
+    font-size: 11pt;
+    color:white;
+    line-height: 30px;
+}
+.area-comentario h4 {
+    font-size: 11pt;
+}
+.area-comentario p{
+    color: blueviolet;
+    line-height: 25px;
+}
