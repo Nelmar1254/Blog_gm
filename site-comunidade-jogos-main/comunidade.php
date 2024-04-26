@@ -19,6 +19,7 @@ include('protect.php');
      <li><a href="home.php">INICIO</a></li>
      <li><a href="novidades.php">+JOGOS</a></li>
      <li><a href="entrar.php">ENTRAR</a></li>
+         <li><a href="logout.php">SAIR</a></li>
     </ul>
   </nav>
   <div id="largura-pagina">
