@@ -19,6 +19,7 @@ include('protect.php');
      <li><a href="comunidade.php">COMUNIDADE</a></li>
      <li><a href="home.php">INICIO</a></li>
      <li><a href="entrar.php">ENTRAR</a></li>
+        <li><a href="logout.php">SAIR</a></li>
    </ul>
    </nav>
    <h1>+JOGOS</h1>
