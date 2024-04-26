@@ -1,28 +1,28 @@
 <?php
+//incluindo o arquivo de conexão
 include('connect.php');
- if (isset($_POST['submit'])) {
-  
-  
 
-  $nome = $_POST['nome'];
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-  $result ="INSERT INTO users (nome,email,senha) VALUES('$nome','$email','$senha', NOW()";
+    // Preparando a declaração SQL
+    $stmt = $mysqli->prepare("INSERT INTO users (nome, email, senha) VALUES (?,?,?)");
+    //prepared statements usa ? e depois insere os valores 
+    $stmt->bind_param("sss", $nome, $email, $senha);
 
-  header('Location: entrar.php');
- }
+    // Executando a declaração
+    if ($stmt->execute()) {
+        echo "Cadastro realizado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar: " . $mysqli->error;
+    }
 
- if (isset($_POST['email']) || isset($_POST['senha']) || isset($_POST['nome'])) {
-  if (strlen($_POST['email'] == 0)) {
-    echo "Preencha o seu email";
-  }elseif (strlen($_POST['senha'] == 0)) {
-    echo "Preencha sua senha";
-  }else {
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $mysqli->real_escape_string($_POST['senha']);
-  } }
-?>
+    // Fechando a declaração e a conexão
+    $stmt->close();
+    $mysqli->close();
+  }
 <!DOCTYPE html>
 <html lang="en">
  <head>
